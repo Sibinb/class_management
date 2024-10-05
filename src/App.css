@@ -1,42 +1,46 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.alter-select-arrow {
+  appearance: none; /* For modern browsers */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background: url("assets/images/down-arrow.svg") no-repeat 90% center; /* Add your custom arrow */
+  background-size: 20px; /* Adjust size of the custom arrow */
+  background-color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 130px); /* 7 columns with 100px width */
+  grid-template-rows: repeat(5, 115px);
+  gap: 5px; /* Optional: space between boxes */
+  /* justify-content: space-between; */
+  align-items: center; /* Center the grid vertically */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-rows-alter {
+  grid-template-rows: repeat(6, 115px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.writing-vertical{
+  writing-mode: vertical-lr;
+  /* text-orientation: upright; */
 }
 
-.card {
-  padding: 2em;
+
+.hidden-modal{
+  visibility: none;
+  transform: scale(0,0);
+  transition: all .1s;
 }
 
-.read-the-docs {
-  color: #888;
+.show-modal{
+  visibility: visible;
+  transform: scale(1,1);
+}
+
+.fixed{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
 }
