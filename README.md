@@ -2,6 +2,7 @@
 
 I have created the frontend. All the states are managed by redux store. So all the data are temporary. When we refresh the page it will go away.
 
+
 - To run the application clone the repository. Then
 
 - ``cd class_management``
